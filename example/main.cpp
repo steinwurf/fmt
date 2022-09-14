@@ -13,6 +13,7 @@ int main()
   fmt::print("{}\n", v);
 
   fmt::memory_buffer out;
-  format_to(out, "For a moment, {} happened.", "nothing");
+  format_to(std::back_inserter(out),
+            "For a moment, {} happened.", "nothing");
   std::cout << out.data() << std::endl;
 }
