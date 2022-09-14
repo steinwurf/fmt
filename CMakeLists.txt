@@ -26,6 +26,7 @@ target_compile_features(fmt INTERFACE cxx_std_14)
 target_compile_definitions(
   fmt INTERFACE FMT_HEADER_ONLY)
 
+# GCC 6.3 breaks with constexpr
 target_compile_definitions(
   fmt INTERFACE FMT_USE_CONSTEXPR=0)
 

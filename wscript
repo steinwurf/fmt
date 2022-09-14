@@ -21,7 +21,10 @@ def build(bld):
     bld(
         name="fmt",
         export_includes=fmt_include.abspath(),
-        export_defines=["FMT_HEADER_ONLY", "FMT_USE_CONSTEXPR=0"],
+        export_defines=[
+            "FMT_HEADER_ONLY",
+            "FMT_USE_CONSTEXPR=0",  # GCC 6.3 breaks with constexpr
+        ],
     )
 
     if bld.is_toplevel():
