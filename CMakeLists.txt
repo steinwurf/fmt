@@ -26,6 +26,9 @@ target_compile_features(fmt INTERFACE cxx_std_14)
 target_compile_definitions(
   fmt INTERFACE FMT_HEADER_ONLY)
 
+target_compile_definitions(
+  fmt INTERFACE FMT_USE_CONSTEXPR=0)
+
 target_include_directories(
   fmt INTERFACE "${STEINWURF_RESOLVE}/fmt-source/include")
 
