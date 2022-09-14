@@ -6,6 +6,10 @@ every change, see the Git log.
 
 Latest
 ------
+* tbd
+
+2.0.1
+-----
 * Patch: Fix build on GCC 6.3.
 
 2.0.0
