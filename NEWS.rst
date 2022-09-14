@@ -6,7 +6,7 @@ every change, see the Git log.
 
 Latest
 ------
-* tbd
+* Major: Update fmt to version 9.1.0.
 
 1.0.0
 -----
