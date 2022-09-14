@@ -7,5 +7,3 @@ every change, see the Git log.
 Latest
 ------
 * Major: Initial version.
-
-

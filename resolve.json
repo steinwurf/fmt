@@ -4,13 +4,17 @@
     "resolver": "git",
     "method": "semver",
     "major": 4,
-    "sources": ["github.com/steinwurf/waf-tools.git"]
+    "sources": [
+      "github.com/steinwurf/waf-tools.git"
+    ]
   },
   {
     "name": "fmt-source",
     "resolver": "git",
     "method": "checkout",
     "checkout": "7.1.3",
-    "sources": ["github.com:fmtlib/fmt.git"]
+    "sources": [
+      "github.com:fmtlib/fmt.git"
+    ]
   }
 ]
