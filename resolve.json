@@ -14,7 +14,7 @@
     "method": "checkout",
     "checkout": "9.1.0",
     "sources": [
-      "github.com:fmtlib/fmt.git"
+      "github.com/fmtlib/fmt.git"
     ]
   }
 ]
