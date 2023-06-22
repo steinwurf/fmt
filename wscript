@@ -6,12 +6,11 @@ APPNAME = "fmt"
 VERSION = "2.0.1"
 
 
+def configure(conf):
+    conf.set_cxx_std(11)
+
+
 def build(bld):
-
-    bld.env.append_unique(
-        "DEFINES_STEINWURF_VERSION", 'STEINWURF_FMT_VERSION="{}"'.format(VERSION)
-    )
-
     # Path to the fmt repo
     fmt_path = bld.dependency_node("fmt-source")
 
@@ -28,7 +27,6 @@ def build(bld):
     )
 
     if bld.is_toplevel():
-
         bld.program(
             features="cxx test",
             source=["example/main.cpp"],
