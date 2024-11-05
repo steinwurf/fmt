@@ -29,7 +29,10 @@ target_compile_definitions(fmt INTERFACE FMT_HEADER_ONLY)
 target_compile_definitions(fmt INTERFACE FMT_USE_CONSTEXPR=0)
 
 target_include_directories(fmt
-                           INTERFACE "${STEINWURF_RESOLVE}/fmt-source/include")
+  INTERFACE "${STEINWURF_RESOLVE}/fmt-source/include")
+
+# Unicode support requires compiling with /utf-8 on MSVC
+target_compile_options(fmt INTERFACE $<$<AND:$<COMPILE_LANGUAGE:CXX>,$<CXX_COMPILER_ID:MSVC>>:/utf-8>)
 
 add_library(steinwurf::fmt ALIAS fmt)
 
