@@ -6,6 +6,10 @@ every change, see the Git log.
 
 Latest
 ------
+* tbd
+
+4.0.0
+-----
 * Major: Update fmt to version 11.0.2.
 
 3.0.0
