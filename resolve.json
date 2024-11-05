@@ -12,7 +12,7 @@
     "name": "fmt-source",
     "resolver": "git",
     "method": "checkout",
-    "checkout": "9.1.0",
+    "checkout": "11.0.2",
     "sources": [
       "github.com/fmtlib/fmt.git"
     ]

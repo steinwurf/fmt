@@ -8,6 +8,8 @@ VERSION = "3.0.0"
 
 def configure(conf):
     conf.set_cxx_std(11)
+    if "cl.exe" in conf.env.get_flat("CXX").lower():
+        conf.env.CXXFLAGS += ["/utf-8"]
 
 
 def build(bld):
