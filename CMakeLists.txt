@@ -47,4 +47,7 @@ if(${CMAKE_PROJECT_NAME} STREQUAL ${PROJECT_NAME})
   # Build executables
   add_executable(format example/main.cpp)
   target_link_libraries(format fmt)
+
+  enable_testing()
+  add_test(format format)
 endif()
