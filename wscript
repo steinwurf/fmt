@@ -6,6 +6,11 @@ APPNAME = "fmt"
 VERSION = "4.0.0"
 
 
+def options(ctx):
+
+    ctx.load("cmake")
+
+
 def configure(ctx):
 
     ctx.load("cmake")
