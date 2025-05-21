@@ -16,7 +16,6 @@ if(NOT DEFINED STEINWURF_RESOLVE)
   endif()
 
   set(STEINWURF_RESOLVE "${CMAKE_CURRENT_SOURCE_DIR}/resolve_symlinks")
-  set(STEINWURF_TOP_NAME fmt)
 endif()
 
 # Define library
