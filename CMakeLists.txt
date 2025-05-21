@@ -16,7 +16,6 @@ if(NOT DEFINED STEINWURF_RESOLVE)
   endif()
 
   set(STEINWURF_RESOLVE "${CMAKE_CURRENT_SOURCE_DIR}/resolve_symlinks")
-  set(STEINWURF_TOP_NAME fmt)
 endif()
 
 # Define library
@@ -48,4 +47,7 @@ if(${CMAKE_PROJECT_NAME} STREQUAL ${PROJECT_NAME})
   # Build executables
   add_executable(format example/main.cpp)
   target_link_libraries(format fmt)
+
+  enable_testing()
+  add_test(format format)
 endif()

@@ -6,32 +6,22 @@ APPNAME = "fmt"
 VERSION = "4.0.0"
 
 
-def configure(conf):
-    conf.set_cxx_std(11)
-    if "cl.exe" in conf.env.get_flat("CXX").lower():
-        conf.env.CXXFLAGS += ["/utf-8"]
+def options(ctx):
+
+    ctx.load("cmake")
 
 
-def build(bld):
-    # Path to the fmt repo
-    fmt_path = bld.dependency_node("fmt-source")
+def configure(ctx):
 
-    # Create system include for fmt
-    fmt_include = fmt_path.find_dir("include")
+    ctx.load("cmake")
 
-    bld(
-        name="fmt",
-        export_includes=fmt_include.abspath(),
-        export_defines=[
-            "FMT_HEADER_ONLY",
-            "FMT_USE_CONSTEXPR=0",  # GCC 6.3 breaks with constexpr
-        ],
-    )
+    if ctx.is_toplevel():
+        ctx.cmake_configure()
 
-    if bld.is_toplevel():
-        bld.program(
-            features="cxx test",
-            source=["example/main.cpp"],
-            target="fmt_tests",
-            use=["fmt"],
-        )
+
+def build(ctx):
+
+    ctx.load("cmake")
+
+    if ctx.is_toplevel():
+        ctx.cmake_build()
