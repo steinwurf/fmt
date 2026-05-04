@@ -6,6 +6,10 @@ every change, see the Git log.
 
 Latest
 ------
+* tbd
+
+5.0.1
+-----
 * Patch: Remove obsolete ``FMT_USE_CONSTEXPR=0`` CMake compile definition.
 
 5.0.0
